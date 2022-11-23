@@ -8,7 +8,7 @@ app.config["TEMPLATES_AUTO_RELOAD"]=True
 mydb = mysql.connector.connect(
   host="localhost",
   user="root",
-  password="12345678",
+  password="12345678", #demo
   database="taipei_day_trip"
 )
 
@@ -166,4 +166,4 @@ def get_attractions_categories():
 		return jsonify(err_json_message)
 
 
-app.run(port=3000)
+app.run(host='0.0.0.0', port=3000)
